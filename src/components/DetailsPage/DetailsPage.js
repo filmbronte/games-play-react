@@ -32,8 +32,8 @@ export const DetailsPage = () => {
                 </div>
 
                 <div className="buttons">
-                    <a href="#" className="button">Edit</a>
-                    <a href="#" className="button">Delete</a>
+                    <a href="/edit" className="button">Edit</a>
+                    <a href="javascript:void(0)" className="button">Delete</a>
                 </div>
             </div>
 
