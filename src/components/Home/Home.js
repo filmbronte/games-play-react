@@ -25,7 +25,6 @@ export const Home = () => {
                         </div>
                     </div>
 
-
                     <p className="no-articles">No games yet</p>
                 </div>
         </section>

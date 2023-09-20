@@ -5,6 +5,8 @@ import {EditPage} from "./components/EditPage/EditPage";
 import {DetailsPage} from "./components/DetailsPage/DetailsPage";
 import {Catalogue} from "./components/Catalogue/Catalogue";
 import {Routes, Route} from "react-router-dom"
+import {Login} from "./components/Login/Login";
+import {Register} from "./components/Register/Register";
 
 function App() {
     return (
@@ -16,6 +18,8 @@ function App() {
                 <Route path={'/edit'} element={<EditPage/>}/>
                 <Route path={'/details'} element={<DetailsPage/>}/>
                 <Route path={'/catalogue'} element={<Catalogue/>}/>
+                <Route path={'/login'} element={<Login/>}/>
+                <Route path={'/register'} element={<Register/>}/>
             </Routes>
         </div>
     );
