@@ -9,8 +9,7 @@ import {EditPage} from "./components/EditPage/EditPage";
 import {DetailsPage} from "./components/DetailsPage/DetailsPage";
 import {Catalogue} from "./components/Catalogue/Catalogue";
 import {Login} from "./components/Login/Login";
-import {Register} from "./components/Register/Register";
-import {getAll} from "./services/gameService";
+import {Register} from "./components/Register/Register"
 
 function App() {
     const [games, setGames] = useState([]);
@@ -19,6 +18,7 @@ function App() {
         gameService.getAll()
             .then(data => {
                 setGames(data);
+                console.log(games)
             })
             .catch(err => console.log(err));
     }, []);
@@ -26,8 +26,9 @@ function App() {
     return (
         <div id="box">
             <Header/>
+            <main id="main-content">
             <Routes>
-                <Route path={'/'} element={<Home/>}/>
+                <Route path={'/'} element={<Home games={games}/>}/>
                 <Route path={'/create'} element={<CreatePage/>}/>
                 <Route path={'/edit'} element={<EditPage/>}/>
                 <Route path={'/details'} element={<DetailsPage/>}/>
@@ -35,6 +36,7 @@ function App() {
                 <Route path={'/login'} element={<Login/>}/>
                 <Route path={'/register'} element={<Register/>}/>
             </Routes>
+            </main>
         </div>
     );
 }

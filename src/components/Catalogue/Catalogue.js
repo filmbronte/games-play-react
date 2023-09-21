@@ -13,7 +13,7 @@ export const Catalogue = ({
                 <h3 className="no-articles">No articles yet</h3>
 
                 :
-                games.map(game => <GameCard {...game}/>)
+                   games.map(game => <GameCard {...game}/>)
 
             }
 
