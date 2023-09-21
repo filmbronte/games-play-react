@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 export const DetailsPage = () => {
     return(
         <section id="game-details">
@@ -32,7 +34,7 @@ export const DetailsPage = () => {
                 </div>
 
                 <div className="buttons">
-                    <a href="/edit" className="button">Edit</a>
+                    <Link to="/edit" className="button">Edit</Link>
                     <a href="javascript:void(0)" className="button">Delete</a>
                 </div>
             </div>

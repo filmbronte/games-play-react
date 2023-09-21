@@ -1,16 +1,18 @@
+import {Link} from "react-router-dom";
+
 export const Header = () => {
     return(
         <header>
-            <h1><a className="home" href="/">GamesPlay</a></h1>
+            <h1><Link to='/' className="home" >GamesPlay</Link></h1>
             <nav>
-                <a href="/catalogue">All games</a>
+                <Link to="/catalogue">All games</Link>
                 <div id="user">
-                    <a href="/create">Create Game</a>
-                    <a href="/">Logout</a>
+                    <Link to="/create">Create Game</Link>
+                    <Link to="/">Logout</Link>
                 </div>
                 <div id="guest">
-                    <a href="/login">Login</a>
-                    <a href="/register">Register</a>
+                    <Link to="/login">Login</Link>
+                    <Link to="/register">Register</Link>
                 </div>
             </nav>
         </header>

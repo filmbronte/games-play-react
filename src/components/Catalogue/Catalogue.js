@@ -1,19 +1,24 @@
-export const Catalogue = () => {
-    return(
+import {Link} from "react-router-dom";
+import {GameCard} from "./GameCard/GameCard";
+
+export const Catalogue = ({
+                              games
+                          }) => {
+    return (
         <section id="catalog-page">
             <h1>All Games</h1>
-            <div className="allGames">
-                <div className="allGames-info">
-                    <img src="./images/avatar-1.jpg"/>
-                        <h6>Action</h6>
-                        <h2>Cover Fire</h2>
-                        <a href="/details" className="details-button">Details</a>
-                </div>
 
-            </div>
+            {games.length === 0 ?
 
-            <h3 className="no-articles">No articles yet</h3>
+                <h3 className="no-articles">No articles yet</h3>
+
+                :
+                games.map(game => <GameCard {...game}/>)
+
+            }
+
+
         </section>
 
-)
+    )
 }
