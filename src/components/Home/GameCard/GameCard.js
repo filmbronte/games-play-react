@@ -1,11 +1,11 @@
 import {Link} from "react-router-dom";
 
-export const GameCard = ({title}) => {
+export const GameCard = ({title, imageUrl}) => {
     return (
         <>
             <div className="game">
                 <div className="image-wrap">
-                    <img src="./images/CoverFire.png"/>
+                    <img src={imageUrl}/>
                 </div>
                 <h3>{title}</h3>
                 <div className="rating">

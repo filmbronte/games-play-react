@@ -18,10 +18,9 @@ function App() {
         gameService.getAll()
             .then(data => {
                 setGames(data);
-                console.log(games)
             })
             .catch(err => console.log(err));
-    }, []);
+    }, [games]);
 
     return (
         <div id="box">
